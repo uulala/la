@@ -25,15 +25,15 @@ router.beforeEach((to, from, next) => {
     const blocks = document.querySelectorAll('pre code:not(.hljs)');
     Array.prototype.forEach.call(blocks, hljs.highlightBlock);
   });
+  next()
   const data = title[to.meta.lang];
   for (let val in data) {
     if (new RegExp('^' + val, 'g').test(to.name)) {
       document.title = data[val];
-      // return;
+      return;
     }
   }
   document.title = 'La';
-  next()
 });
 
 Vue.config.productionTip = false;

@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "Component",
+  name: "LaComponent",
 };
 </script>
 

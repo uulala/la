@@ -42,7 +42,7 @@ const registerRoute = (navConfig) => {
     route.push({
       path: `/${lang}/component`,
       redirect: `/${lang}/component/installation`,
-      component: load(lang, 'component'),
+      component: load(lang, 'la-component'),
       children: []
     });
     navs.forEach(nav => {
