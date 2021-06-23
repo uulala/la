@@ -1,0 +1,14 @@
+{
+  "zh-CN": {
+    "home": "La - UI 组件库",
+    "guide": "指南 | La",
+    "component": "组件 | La",
+    "resource": "资源 | La"
+  },
+  "en-US": {
+    "home": "La - A Desktop UI Toolkit for Web",
+    "guide": "Guide | La",
+    "component": "Component | La",
+    "resource": "Resource | La"
+  }
+}
