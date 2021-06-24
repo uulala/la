@@ -2,20 +2,18 @@
   <div>
     <div class="header">
       <div class="menu-box">
-        <div class="menu-item" v-for="item in menu" :key="item.name">
-          <template v-if="item.path">
-            <router-link
-              active-class="active"
-              :to="`${lang}/${item.path}`"
-              exact
-              >{{ item.name }}
-            </router-link>
-          </template>
-        </div>
-        <router-link active-class="active" :to="`${lang}/component`" exact>
+        <router-link
+          active-class="active"
+          :to="`${lang}/component`"
+          exact
+          class="link"
+        >
           组件
         </router-link>
       </div>
+
+      <div class="title">La</div>
+      <div class="sub-title">基于 Vue2.0 的桌面端组件库</div>
     </div>
     <div class="body"></div>
     <div class="footer"></div>
@@ -23,16 +21,12 @@
 </template>
 
 <script>
-import navConfig from "examples/nav.config.json";
-
 export default {
   name: "Home",
   data() {
     const lang = localStorage.getItem("la-lang") || "zh-CN";
-    const menu = navConfig[lang];
     return {
       lang,
-      menu,
     };
   },
   mounted() {},
@@ -41,4 +35,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.menu-box {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+  .link {
+    text-decoration: none;
+    color: #888;
+    display: block;
+    padding: 0 22px;
+  }
+}
+.title {
+  font-weight: 650;
+  font-size: 18px;
+  margin: 10px;
+}
+.sub-title {
+  margin: 10px;
+}
 </style>

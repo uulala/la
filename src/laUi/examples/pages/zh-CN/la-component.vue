@@ -1,7 +1,6 @@
 <template>
-  <div class="component-page">
+  <div class="component-page page-container">
     <div class="side-nav">
-      <div></div>
       <div class="menu-item" v-for="menuItem in menu" :key="menuItem.name">
         <template v-if="menuItem.groups">
           <div
@@ -15,14 +14,15 @@
               active-class="active"
               :to="`/${lang}/component${comItem.path}`"
               exact
-              >
+              class="link"
+            >
               {{ comItem.title }}
             </router-link>
           </div>
         </template>
       </div>
     </div>
-    <div class="installation">
+    <div class="page-component__content">
       <router-view class="content"></router-view>
     </div>
   </div>
@@ -50,8 +50,19 @@ export default {
 }
 .side-nav {
   width: 30%;
-  max-width: 300px;
+  min-width: 200px;
+  max-width: 200px;
+  border-right: 1px solid #eee;
+  padding-right: 10px;
+  margin-right: 10px;
 }
 .group-item {
+  .link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 0 22px;
+    text-align: left;
+  }
 }
 </style>

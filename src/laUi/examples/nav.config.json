@@ -33,6 +33,7 @@
             "name": "组件",
             "groups": [
                 {
+                    "name":"Notice",
                     "list": [
                         {
                             "path": "/alert",
