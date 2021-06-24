@@ -8,6 +8,7 @@ import LaUI from '@/laUi/index.js'
 import routes from 'examples/router.config.js'
 import demoBlock from 'examples/components/demo-block';
 import 'examples/assets/styles/common.scss';
+import 'examples/demo-styles/index.scss';
 
 Vue.use(LaUI)
 Vue.use(VueRouter);
