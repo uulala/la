@@ -19,6 +19,10 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 开发前提：
+1. npm install
+2. Windows 环境下安装 make[https://blog.csdn.net/Nicholas_Liu2017/article/details/78323391]
+### 开发流程
+1. make new componentname chineseName
+2. 修改新增组件
+3. 测试并推送
