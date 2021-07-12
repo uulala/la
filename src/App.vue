@@ -1,23 +1,35 @@
 <template>
   <div id="app">
-    <router-view />
+    <page-header />
+    <div class="page-content">
+      <router-view />
+    </div>
+    <page-footer />
   </div>
 </template>
 
 <script>
+import PageHeader from "./components/PageHeader";
+import PageFooter from "./components/PageFooter";
+
 export default {
   name: "App",
+  components: {
+    PageHeader,
+    PageFooter,
+  },
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-  margin: 20px 10px;
+}
+.page-content{
+  padding: 60px 10px 10px 40px;
 }
 </style>

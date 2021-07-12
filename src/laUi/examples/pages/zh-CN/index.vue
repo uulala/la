@@ -1,17 +1,6 @@
 <template>
   <div>
     <div class="header">
-      <div class="menu-box">
-        <router-link
-          active-class="active"
-          :to="`${lang}/component`"
-          exact
-          class="link"
-        >
-          组件
-        </router-link>
-      </div>
-
       <div class="title">La</div>
       <div class="sub-title">基于 Vue2.0 的桌面端组件库</div>
     </div>

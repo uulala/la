@@ -57,6 +57,9 @@ export default {
     padding: 0 22px;
     text-align: left;
   }
+  .active {
+    color: #409eff;
+  }
 }
 
 .page-component__scroll {
