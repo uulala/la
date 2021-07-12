@@ -5,6 +5,8 @@ import title from 'examples/i18n/title';
 
 import App from './App.vue'
 import LaUI from '@/laUi/index.js'
+import '@/laUi/packages/theme-chalk/src/index.scss';
+
 import routes from 'examples/router.config.js'
 import demoBlock from 'examples/components/demo-block';
 import 'examples/assets/styles/common.scss';

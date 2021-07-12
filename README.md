@@ -26,3 +26,7 @@ npm run lint
 1. make new componentname chineseName
 2. 修改新增组件
 3. 测试并推送
+
+
+### todo 
+1. 修改自动化测试
