@@ -6,15 +6,14 @@
   "files": [
     "lib",
     "src/laUi/packages",
-    "types"
+    "src/laUi/types"
   ],
-  "typings": "types/index.d.ts",
+  "typings": "src/laUi/types/index.d.ts",
   "scripts": {
     "bootstrap": "yarn || npm i",
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "build-entry": "node build/bin/build-entry.js"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {},
   "devDependencies": {
