@@ -3,7 +3,7 @@
     <div class="menu-box">
       <router-link
         active-class="active"
-        :to="`${lang}/component`"
+        :to="`${lang}`"
         exact
         class="link"
       >

@@ -13,7 +13,8 @@
     "bootstrap": "yarn || npm i",
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "push": "yarn build && scp -r dist/* root@123.57.184.53:/home/ui"
   },
   "dependencies": {},
   "devDependencies": {

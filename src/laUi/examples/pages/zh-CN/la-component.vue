@@ -1,6 +1,7 @@
 <template>
   <div class="page-component__scroll">
-    <div class="page-container page-component">
+    <div class="el-scrollbar__wrap">
+      <div class="page-container page-component">
       <div class="page-component__nav">
         <div class="side-nav">
           <div class="menu-item" v-for="menuItem in menu" :key="menuItem.name">
@@ -29,6 +30,8 @@
         <router-view class="content"></router-view>
       </div>
     </div>
+    </div>
+    
   </div>
 </template>
 
@@ -67,6 +70,7 @@ export default {
   margin-top: 80px;
 
   > .el-scrollbar__wrap {
+    height: 100%;
     overflow-x: auto;
   }
 }

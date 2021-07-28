@@ -4,19 +4,19 @@
     <div class="page-content">
       <router-view />
     </div>
-    <page-footer />
+    <!-- <page-footer /> -->
   </div>
 </template>
 
 <script>
 import PageHeader from "./components/PageHeader";
-import PageFooter from "./components/PageFooter";
+// import PageFooter from "./components/PageFooter";
 
 export default {
   name: "App",
   components: {
     PageHeader,
-    PageFooter,
+    // PageFooter,
   },
 };
 </script>
@@ -29,7 +29,9 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.page-content{
+.page-content {
   padding: 60px 10px 10px 40px;
+  height: 100%;
+  box-sizing: border-box;
 }
 </style>
