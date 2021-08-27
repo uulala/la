@@ -14,7 +14,8 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "push": "yarn build && scp -r dist/* root@123.57.184.53:/home/ui"
+    "push": "yarn build && scp -r dist/* root@123.57.184.53:/home/ui",
+    "entry": "node build/bin/build-entry.js"
   },
   "dependencies": {},
   "devDependencies": {

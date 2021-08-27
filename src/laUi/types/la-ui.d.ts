@@ -5,7 +5,8 @@ import { LaUIComponent, LaUIComponentSize, LaUIHorizontalAlignment } from './com
 import { LaAlert } from './alert'
 
 
-/** LatUI component common definition */
+/** LatUI component common definition */import { LaXiyouji } from './xiyouji'
+
 export type Component = LaUIComponent
 
 /** Alert Component */
@@ -16,3 +17,5 @@ export type ComponentSize = LaUIComponentSize
 
 /** Horizontal alignment */
 export type HorizontalAlignment = LaUIHorizontalAlignment
+/** Xiyouji Component */
+export class Xiyouji extends LaXiyouji {}

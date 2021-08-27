@@ -28,7 +28,7 @@ const install = function(Vue, opts = {}) {
   });
 
 //   Vue.use(InfiniteScroll);
-  Vue.use(Loading.directive);
+//  Vue.use(Loading.directive);
 
   Vue.prototype.$ELEMENT = {
     size: opts.size || '',
@@ -56,7 +56,7 @@ export default {
 //   i18n: locale.i18n,
   install,
 //   CollapseTransition,
-  Loading,
+//  Loading,
 {{list}}
 };
 `;

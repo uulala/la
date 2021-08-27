@@ -1,12 +1,8 @@
 <template>
   <div class="page-header">
+    <la-xiyouji> </la-xiyouji>
     <div class="menu-box">
-      <router-link
-        active-class="active"
-        :to="`${lang}`"
-        exact
-        class="link"
-      >
+      <router-link active-class="active" :to="`${lang}`" exact class="link">
         主页
       </router-link>
 
