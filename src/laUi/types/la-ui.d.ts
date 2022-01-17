@@ -6,6 +6,7 @@ import { LaAlert } from './alert'
 
 
 /** LatUI component common definition */import { LaXiyouji } from './xiyouji'
+import { LaTable } from './table'
 
 export type Component = LaUIComponent
 
@@ -19,3 +20,6 @@ export type ComponentSize = LaUIComponentSize
 export type HorizontalAlignment = LaUIHorizontalAlignment
 /** Xiyouji Component */
 export class Xiyouji extends LaXiyouji {}
+
+/** Table Component */
+export class Table extends LaTable {}
