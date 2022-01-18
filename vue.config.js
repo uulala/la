@@ -16,9 +16,9 @@ module.exports = {
                 // 路径别名
                 alias: {
                     '@': path.resolve('src'),
-                    main: path.resolve(__dirname, 'src/laUi'),
-                    packages: path.resolve(__dirname, 'src/laUi/packages'),
-                    examples: path.resolve(__dirname, 'src/laUi/examples'),
+                    main: path.resolve(__dirname, 'src'),
+                    packages: path.resolve(__dirname, 'packages'),
+                    examples: path.resolve(__dirname, 'examples'),
                 },
             },
             module: {

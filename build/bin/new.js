@@ -17,7 +17,7 @@ const componentname = process.argv[2];
 const chineseName = process.argv[3] || componentname;
 const ComponentName = uppercamelcase(componentname);
 // path.resolve() 方法会把一个路径或路径片段的序列解析为一个绝对路径。
-const PackagePath = path.resolve(__dirname, '../../src/laUi/packages', componentname);
+const PackagePath = path.resolve(__dirname, '../../packages', componentname);
 
 const Files = [
   {
@@ -88,25 +88,25 @@ export declare class La${ComponentName} extends LaUIComponent {
 ];
 
 // 添加到 components.json
-const componentsFile = require('../../src/laUi/components.json');
+const componentsFile = require('../../src/components.json');
 if (componentsFile[componentname]) {
   console.error(`${componentname} 已存在.`);
   process.exit(1);
 }
 componentsFile[componentname] = `./packages/${componentname}/index.js`;
-fileSave(path.join(__dirname, '../../src/laUi/components.json'))
+fileSave(path.join(__dirname, '../../src/components.json'))
   .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
   .end('\n');
 
 // 添加到 index.scss
-const sassPath = path.join(__dirname, '../../src/laUi/packages/theme-chalk/src/index.scss');
+const sassPath = path.join(__dirname, '../../packages/theme-chalk/src/index.scss');
 const sassImportText = `${fs.readFileSync(sassPath)}@import "./${componentname}.scss";`;
 fileSave(sassPath)
   .write(sassImportText, 'utf8')
   .end('\n');
 
 // 添加到 la-ui.d.ts
-const laTsPath = path.join(__dirname, '../../src/laUi/types/la-ui.d.ts');
+const laTsPath = path.join(__dirname, '../../types/la-ui.d.ts');
 
 let laTsText = `${fs.readFileSync(laTsPath)}
 /** ${ComponentName} Component */
@@ -129,7 +129,7 @@ Files.forEach(file => {
 });
 
 // 添加到 nav.config.json
-const navConfigFile = require('../../src/laUi/examples/nav.config.json');
+const navConfigFile = require('../../examples/nav.config.json');
 
 Object.keys(navConfigFile).forEach(lang => {
   let groups = navConfigFile[lang][2].groups;
@@ -141,7 +141,7 @@ Object.keys(navConfigFile).forEach(lang => {
   });
 });
 
-fileSave(path.join(__dirname, '../../src/laUi/examples/nav.config.json'))
+fileSave(path.join(__dirname, '../../examples/nav.config.json'))
   .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
   .end('\n');
 
