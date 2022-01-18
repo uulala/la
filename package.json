@@ -5,10 +5,11 @@
   "main": "lib/la-ui.common.js",
   "files": [
     "lib",
-    "src/laUi/packages",
-    "src/laUi/types"
+    "src",
+    "packages",
+    "types"
   ],
-  "typings": "src/laUi/types/index.d.ts",
+  "typings": "types/index.d.ts",
   "scripts": {
     "bootstrap": "yarn || npm i",
     "dev": "vue-cli-service serve",
